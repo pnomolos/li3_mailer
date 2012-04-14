@@ -155,9 +155,9 @@ class Swift extends \li3_mailer\net\mail\Transport {
 					$translated = $prop;
 					if (is_array($value)) {
 						$newvalue = array();
-						foreach ($value as $name => $address) {
-							if (is_int($name)) {
-								$newvalue[] = $address;
+						foreach ($value as $address => $name) {
+							if (is_int($address)) {
+								$newvalue[] = $name;
 							} else {
 								$newvalue[$address] = $name;
 							}
