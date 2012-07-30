@@ -27,7 +27,7 @@ Libraries::paths(array('adapter' => $existing));
  */
 $path = Libraries::get(true, 'resources') . '/tmp/cache/mails';
 if (!is_dir($path)) {
-	mkdir($path);
+	mkdir($path, 0777, true);
 }
 
 /**
